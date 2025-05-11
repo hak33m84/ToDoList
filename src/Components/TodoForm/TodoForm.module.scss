@@ -1,0 +1,58 @@
+.todoForm {
+  &__group {
+    margin-bottom: rem-calc(16);
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: rem-calc(8);
+    font-size: 0.875remrem-calc(14);
+    font-weight: 500;
+    color: #4b5563;
+  }
+
+  &__input {
+    width: 100%;
+    width: rem-calc(681);
+    height: rem-calc(59);
+    padding: rem-calc(15) rem-calc(24);
+    border: 1px solid #d1d5db;
+    border-radius: rem-calc(120);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    font-size: rem-calc(16);
+    font-weight: 400;
+
+    &:focus {
+      border-color: #3b82f6;
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    width: rem-calc(681);
+    height: rem-calc(59);
+    padding: 0 rem-calc(32);
+    background-color: #601feb;
+    color: white;
+    border: none;
+    border-radius: rem-calc(24);
+    font-weight: 500;
+    font-size: rem-calc(16);
+    cursor: pointer;
+
+    &:hover {
+      background-color: #601feb;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+    }
+
+    &:disabled {
+      background-color: #d9dcdd;
+    }
+  }
+}

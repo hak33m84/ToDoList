@@ -1,0 +1,134 @@
+// Variables
+$primary-color: #601feb;
+$background-color: #f5f5f5;
+
+h1 {
+  text-align: center;
+  color: #000000;
+  font-size: rem-calc(40);
+  font-weight: 500;
+  line-height: rem-calc(60);
+  margin-top: rem-calc(114);
+  margin-bottom: rem-calc(4);
+}
+
+h2 {
+  text-align: center;
+  color: #444444;
+  font-size: rem-calc(20);
+  font-weight: 400;
+  line-height: rem-calc(60);
+}
+
+.container {
+  max-width: 837px;
+  margin: rem-calc(40) auto;
+  background: white;
+  border-radius: rem-calc(24);
+  padding: rem-calc(16);
+  gap: rem-calc(24);
+
+  .searchAddBar {
+    display: flex;
+    flex-direction: row;
+    gap: rem-calc(12);
+    padding: rem-calc(12) rem-calc(16);
+
+    .addTodoButton {
+      width: rem-calc(132);
+      height: rem-calc(59);
+      padding: rem-calc(10);
+      background-color: #601feb;
+      color: #ffffff;
+      border-radius: rem-calc(24);
+      font-size: rem-calc(16);
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba($primary-color, 0.9);
+      }
+    }
+
+    input {
+      flex: 1;
+      padding: rem-calc(24) rem-calc(15);
+      border: rem-calc(1) solid #e0e0e0;
+      border-radius: rem-calc(120);
+      font-size: rem-calc(16);
+      font-weight: 400;
+    }
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: rem-calc(16);
+
+    .checkBox {
+      -webkit-appearance: none; /* Menghilangkan tampilan default */
+      appearance: none; /* Menghilangkan tampilan default */
+      width: rem-calc(20); /* Ukuran checkbox */
+      height: rem-calc(20); /* Ukuran checkbox */
+      border: rem-calc(2) solid #ccc; /* Warna border */
+      border-radius: rem-calc(4); /* Sudut melengkung */
+      cursor: pointer; /* Kursor pointer saat hover */
+      outline: none; /* Menghilangkan outline */
+    }
+
+    .checkBox:checked {
+      background-color: #601feb; /* Warna latar belakang saat dicentang */
+      border-color: #601feb; /* Warna border saat dicentang */
+    }
+
+    .checkBox:checked::after {
+      content: '✔'; /* Tanda centang */
+      color: white; /* Warna tanda centang */
+      font-size: rem-calc(16); /* Ukuran font */
+      position: relative;
+      left: rem-calc(2); /* Posisi horizontal */
+      top: rem-calc(-4); /* Posisi vertikal */
+    }
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: rem-calc(12);
+      padding: rem-calc(12) rem-calc(24);
+      background: #ffffff;
+      border-radius: rem-calc(5);
+      font-size: rem-calc(16);
+      font-weight: 500;
+      margin-bottom: rem-calc(16);
+
+      .todoText {
+        flex: 1;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &.completed {
+          text-decoration: line-through;
+          color: gray;
+        }
+      }
+
+      .todoItem {
+        background: white;
+        padding: rem-calc(32);
+        border-radius: rem-calc(8);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: rem-calc(1) solid #e0e0e0;
+      }
+    }
+  }
+
+  .spinnerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: rem-calc(20);
+  }
+}
