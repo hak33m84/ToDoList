@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import { fetchTodos } from '@/TodoFunction/fetchTodo';
 
 export const useGetTodos = (page: number, limit: number) => {
@@ -7,6 +7,6 @@ export const useGetTodos = (page: number, limit: number) => {
 
     queryFn: () => fetchTodos(page, limit),
 
-    keepPreviousData: true,
+    placeholderData: keepPreviousData,
   });
 };
