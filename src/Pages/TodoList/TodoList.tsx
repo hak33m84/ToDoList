@@ -120,7 +120,7 @@ const TodoList = () => {
                     {todo.title}
                   </span>
                   <button onClick={() => handleDeleteTodo(todo.id)}>
-                    <img src='./src/assets/svg/delete.svg' />
+                    <img src='./src/assets/svg/delete1.svg' />
                   </button>
                 </li>
               ))
